@@ -1,0 +1,163 @@
+html {
+  font-family: serif, sans-serif; }
+
+body {
+  font-size: 16px;
+  color: #D2691E;
+  background-color: #BCDCE2; }
+
+h1 {
+  font-size: 32px;
+  font-weight: bold; }
+
+h2 {
+  font-size: 28.8px; }
+
+h3 {
+  font-size: 24px; }
+
+p {
+  line-height: 1.1;
+  font-family: monospace, "Microsoft JhengHei"; }
+
+a {
+  color: #e4843f;
+  text-decoration: none;
+  display: block; }
+  a:hover {
+    background-color: #f0bd99; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[draggable="true"] {
+  /*
+   To prevent user selecting inside the drag source
+  */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto; }
+  .wrap .header {
+    padding: 20px;
+    margin-bottom: 30px; }
+  .wrap .main {
+    margin-bottom: 30px; }
+  .wrap .footer {
+    border: 2px solid black;
+    padding: 50px;
+    margin-bottom: 15px; }
+
+.main .target-container .target-container--style {
+  width: 128px;
+  height: 190px;
+  border: 1px solid #CCC;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #92C6D0; }
+
+.main .target-container #clover {
+  width: 128px;
+  height: 190px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url("../images/cardboard_clover.svg");
+  background-repeat: no-repeat; }
+
+.main .target-container #spades {
+  width: 128px;
+  height: 190px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url("../images/cardboard_spades.svg");
+  background-repeat: no-repeat; }
+
+.main .target-container #heart {
+  width: 128px;
+  height: 190px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url("../images/cardboard_heart.svg");
+  background-repeat: no-repeat; }
+
+.main .target-container #diamond {
+  width: 128px;
+  height: 190px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url("../images/cardboard_diamond.svg");
+  background-repeat: no-repeat; }
+
+.main .souces-container .cardbox {
+  width: 128px;
+  height: 190px;
+  border: 2px solid #CCC;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: relative; }
+
+.main .souces-container .card {
+  width: 128px;
+  height: 190px; }
+
+.main .souces-container .cardList-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1; }
+
+.main .souces-container .cardList-2 {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  z-index: 2; }
+
+.main .souces-container .cardList-3 {
+  position: absolute;
+  top: 90px;
+  left: 0px;
+  z-index: 3; }
+
+.main .souces-container .cardList-4 {
+  position: absolute;
+  top: 135px;
+  left: 0px;
+  z-index: 4; }
+
+.main .souces-container .cardList-5 {
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  z-index: 5; }
+
+.main .souces-container .cardList-6 {
+  position: absolute;
+  top: 225px;
+  left: 0px;
+  z-index: 6; }
+
+.main .souces-container .cardList-7 {
+  position: absolute;
+  top: 270px;
+  left: 0px;
+  z-index: 7; }
+
+.dragging {
+  opacity: .25; }
+
+.hover {
+  background-color: rgba(0, 191, 165, 0.04); }
