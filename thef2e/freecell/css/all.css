@@ -1,5 +1,5 @@
 html {
-  font-family: serif, sans-serif; }
+  font-family: Merriweather, Regular; }
 
 body {
   font-size: 16px;
@@ -102,59 +102,60 @@ img {
   background-image: url("../images/cardboard_diamond.svg");
   background-repeat: no-repeat; }
 
-.main .souces-container .cardbox {
-  width: 128px;
-  height: 190px;
-  border: 2px solid #CCC;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  position: relative; }
+.main .souces-container {
+  margin-bottom: 320px; }
+  .main .souces-container .cardbox {
+    width: 128px;
+    height: 190px;
+    border: 2px solid #CCC;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: relative; }
+  .main .souces-container .card {
+    width: 128px;
+    height: 190px; }
+  .main .souces-container .cardList-1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1; }
+  .main .souces-container .cardList-2 {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    z-index: 2; }
+  .main .souces-container .cardList-3 {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    z-index: 3; }
+  .main .souces-container .cardList-4 {
+    position: absolute;
+    top: 135px;
+    left: 0px;
+    z-index: 4; }
+  .main .souces-container .cardList-5 {
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    z-index: 5; }
+  .main .souces-container .cardList-6 {
+    position: absolute;
+    top: 225px;
+    left: 0px;
+    z-index: 6; }
+  .main .souces-container .cardList-7 {
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    z-index: 7; }
 
-.main .souces-container .card {
-  width: 128px;
-  height: 190px; }
-
-.main .souces-container .cardList-1 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 1; }
-
-.main .souces-container .cardList-2 {
-  position: absolute;
-  top: 45px;
-  left: 0px;
-  z-index: 2; }
-
-.main .souces-container .cardList-3 {
-  position: absolute;
-  top: 90px;
-  left: 0px;
-  z-index: 3; }
-
-.main .souces-container .cardList-4 {
-  position: absolute;
-  top: 135px;
-  left: 0px;
-  z-index: 4; }
-
-.main .souces-container .cardList-5 {
-  position: absolute;
-  top: 180px;
-  left: 0px;
-  z-index: 5; }
-
-.main .souces-container .cardList-6 {
-  position: absolute;
-  top: 225px;
-  left: 0px;
-  z-index: 6; }
-
-.main .souces-container .cardList-7 {
-  position: absolute;
-  top: 270px;
-  left: 0px;
-  z-index: 7; }
+.main .freecellFunction {
+  margin-bottom: 50px; }
+  .main .freecellFunction .textFunction {
+    font-size: 25px;
+    color: black;
+    font-family: Merriweather,Regular; }
 
 .dragging {
   opacity: .25; }
