@@ -99,7 +99,7 @@ console.log(newNum52);
 // }//陣列得轉字串
 //img 本身可以拖曳，故設為draggable="false"
 
-//52排塞進去陣列
+//52張牌塞進去陣列
 var cardbox_1__Arr=[];
 var cardbox_2__Arr=[];
 var cardbox_3__Arr=[];
@@ -134,13 +134,6 @@ for (var i = 0; i < 6; i++) {
 	cardbox_8__Arr[i] = newNum52[i+46];
 }
 
-//判斷drag中數字有無小於要drop的牌
-// if (cardbox_1__Arr[0].num-1 ==arr.num 
-// 	&& cardbox_1__Arr[0].numColor != cardbox_2__Arr[0].numColor) {
-// 	console.log("true");
-// }else{
-// 	console.log("false");
-// }
 
 var cardbox_1 =document.querySelector('#cardbox_1');
 var cardbox_2 =document.querySelector('#cardbox_2');
@@ -174,8 +167,10 @@ function cardList(item,item2){
 
 //判斷該陣列的最後一張可拖曳，或許可以寫一個判斷目前位置，或許可以用slice
 function dragLastCard(){
-	var cardbox_1__Img = document.querySelectorAll('#cardbox_1 img');
-	cardbox_1__Img[cardbox_1__Img.length-1].draggable='true';
+	var cardboxALL = document.querySelectorAll('.cardbox');
+	for (var i = 0; i < cardboxALL.length; i++) {
+		cardboxALL[i].lastChild.draggable=true;
+	}
 }
 dragLastCard();
 
@@ -190,20 +185,20 @@ dragLastCard();
 //右邊完成區
 //判斷花色是否相同，數字是否順序遞增 
 
-//知道當前區域，使用pop()直接刪除原本的地方
-// cardbox_1__Arr.pop();
-// console.log(cardbox_1__Arr.pop());
 
 //------觸發拖曳---------//
 
-let sourceContainerId = "";
+var sourceContainerId = "";
 
-// 讓物件允許拖曳，draggable="true"
-let dragSources = document.querySelectorAll('[draggable="true"]');
-dragSources.forEach(dragSource => {
-  dragSource.addEventListener('dragstart', dragStart);
-  dragSource.addEventListener("dragend", dragEnd);
-});
+// 讓物件允許拖曳，draggable="true"，讓它成為函數，每次drop後刷新
+function draggableTure(){
+	var dragSources = document.querySelectorAll('[draggable="true"]');
+	dragSources.forEach(dragSource => {
+	  dragSource.addEventListener('dragstart', dragStart);
+	  dragSource.addEventListener("dragend", dragEnd);
+	});
+}
+draggableTure();
 
 
 //針對"物件"
@@ -213,8 +208,6 @@ function dragStart (e) {
   this.classList.add('dragging');
   e.dataTransfer.setData('text/plain', e.target.id);
   sourceContainerId = this.parentElement.id;//父元素ID
-  draggableTrue(e);
-  
 }
 
 //針對"物件"
@@ -224,7 +217,7 @@ function dragEnd(e){
 	this.classList.remove('dragging');
 }
 
-//////////////////////////////////////////////////////////////////////////
+//*******************************************************//
 
 // Allow multiple dropped targets
 let dropTargets = document.querySelectorAll(
@@ -244,18 +237,17 @@ dropTargets.forEach(dropTarget => {
 function dropped (e) {
 	if (this.id !==sourceContainerId) {//若父元素ID不相等
 		console.log('觸發drop，已放入目標位置');
-		console.log(this);
 	  cancelDefault(e);
-	  let id = e.dataTransfer.getData('text/plain', e.target.id);
+	  let id = e.dataTransfer.getData('text/plain');
 	  console.log(e.dataTransfer);
 	  e.target.appendChild(document.querySelector('#' + id));
 	  //可以針對目標容器，也可以讓物件暫時成為容器
 	  this.classList.remove('hover');
 	} 
 	dragLastCard();
+	draggableTure();
+
 }
-
-
 
 function dragOver(e){
 	//為何不阻止就無法放入?
@@ -264,7 +256,9 @@ function dragOver(e){
 	//因為dragover有點頻繁
 	console.log("觸發dragover，連續觸發")
 	this.classList.add('hover');
+
 }
+
 function dragLeave(e){
 	console.log("觸發dragleave，離開目標位置時")
 	this.classList.remove('hover');
@@ -279,20 +273,3 @@ function cancelDefault (e) {
   e.stopPropagation();
   return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
