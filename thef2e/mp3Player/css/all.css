@@ -1,0 +1,247 @@
+body {
+  font-size: 16px;
+  color: #D2691E;
+  font-family: "SF Pro Text,Semibold"; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.border_radius {
+  border-radius: 50%; }
+
+a:hover {
+  text-decoration: none;
+  background: none;
+  display: block; }
+
+.btn--bg {
+  background-color: white; }
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto; }
+  .wrap .header {
+    padding: 20px;
+    margin-bottom: 30px; }
+  .wrap .main {
+    margin-bottom: 30px; }
+  .wrap .footer {
+    border: 2px solid black;
+    padding: 50px;
+    margin-bottom: 15px; }
+
+#MPlayer__container #status {
+  margin-bottom: 75px; }
+
+#MPlayer__container .aside {
+  -webkit-transform: translateX(-1000px);
+  -ms-transform: translateX(-1000px);
+  transform: translateX(-1000px);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  color: black; }
+  #MPlayer__container .aside .albumImg {
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-box-shadow: 0.5px 0.5px 0.5px;
+    box-shadow: 0.5px 0.5px 0.5px;
+    position: relative; }
+    #MPlayer__container .aside .albumImg .albumImg__center {
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border-radius: 50%;
+      background-color: white;
+      -webkit-box-shadow: 0.1px 0.1px 1px 1px lightgrey inset;
+      box-shadow: 0.1px 0.1px 1px 1px lightgrey inset;
+      position: absolute; }
+  #MPlayer__container .aside .jp-artist {
+    width: 200px;
+    font-size: 26px; }
+  #MPlayer__container .aside .aside__play {
+    width: 11px;
+    height: 15px;
+    display: block;
+    background-image: url("../images/play-button--blue.svg"); }
+  #MPlayer__container .aside .aside__pause {
+    width: 11px;
+    height: 15px;
+    display: block;
+    background-image: url("../images/pause-button-sm.svg"); }
+  #MPlayer__container .aside .addList {
+    width: 11px;
+    height: 15px;
+    display: block;
+    background-image: url("../images/play-button--blue.svg"); }
+
+#MPlayer__container .active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
+
+#MPlayer__container .album .albumImg {
+  width: 220px;
+  height: 220px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 70px;
+  position: relative;
+  -webkit-transform: translateX(-70px);
+  -ms-transform: translateX(-70px);
+  transform: translateX(-70px);
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+  z-index: 99; }
+  #MPlayer__container .album .albumImg .albumImg__center {
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-box-shadow: 0.1px 0.1px 1px 1px lightgrey inset;
+    box-shadow: 0.1px 0.1px 1px 1px lightgrey inset;
+    position: absolute;
+    z-index: 99; }
+  #MPlayer__container .album .albumImg .albumImg__other {
+    width: 80px;
+    height: 220px;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    position: absolute; }
+
+#MPlayer__container .album .active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s; }
+
+#MPlayer__container .album .albumEdit .subTitle {
+  width: 300px;
+  font-size: 22px;
+  color: black; }
+
+#MPlayer__container .mainTitle {
+  width: auto;
+  font-size: 20px;
+  color: black; }
+
+#MPlayer__container .subTitle {
+  width: auto;
+  font-size: 16px;
+  color: lightgrey; }
+
+#MPlayer__container .playBar--style {
+  width: 252px;
+  height: 7px;
+  background-color: #FFE7E3;
+  border-radius: 25px;
+  -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px lightgrey;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px lightgrey; }
+
+#MPlayer__container .jp-seek-bar {
+  width: 100%;
+  cursor: pointer; }
+
+#MPlayer__container .jp-play-bar {
+  background-color: #F1644C;
+  height: 7px; }
+
+#MPlayer__container .MPlayer__controls .play__bg {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px lightgrey;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px lightgrey;
+  background-color: white;
+  position: relative; }
+
+#MPlayer__container .MPlayer__controls .play {
+  width: 37px;
+  height: 49px;
+  display: block;
+  position: absolute;
+  background-image: url("../images/play-button.svg");
+  top: 18px;
+  left: 25px; }
+
+#MPlayer__container .MPlayer__controls .pause {
+  width: 30px;
+  height: 42px;
+  display: block;
+  position: absolute;
+  background-image: url("../images/pause-button.svg");
+  top: 18px;
+  left: 25px; }
+
+#MPlayer__container .playList {
+  color: #9D9D9D;
+  margin-right: 100px; }
+  #MPlayer__container .playList .moveable {
+    list-style: none;
+    margin: 0px; }
+    #MPlayer__container .playList .moveable .jp-playlist-item {
+      width: auto;
+      font-size: 16px;
+      text-decoration: none;
+      color: black; }
+      #MPlayer__container .playList .moveable .jp-playlist-item .jp-artist {
+        font-size: 12px;
+        color: #9D9D9D; }
+      #MPlayer__container .playList .moveable .jp-playlist-item:hover {
+        background-color: #eee; }
+
+#MPlayer__container .subscribe {
+  border-radius: 25px;
+  width: 500px;
+  height: 300px;
+  color: white;
+  position: relative;
+  top: -100px;
+  -webkit-transform: translateY(300px);
+  -ms-transform: translateY(300px);
+  transform: translateY(300px);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  background-color: #EE553B; }
+  #MPlayer__container .subscribe .close {
+    position: absolute;
+    top: 10px;
+    right: 20px; }
+  #MPlayer__container .subscribe h2 {
+    line-height: 1.2; }
+  #MPlayer__container .subscribe p {
+    font-size: 24px; }
+  #MPlayer__container .subscribe .subscribe__btn {
+    width: 168px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    background-color: #2AAFEA; }
+  #MPlayer__container .subscribe .active {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+
+.hidden {
+  display: none; }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!--bootstrap 4-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<!--goole icon -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+ 	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	
+	<!-- jplayer -->
+ 	<script type="text/javascript" src="js/jPlayer-master/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer-master/dist/jplayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer-master/dist/add-on/jplayer.playlist.min.js"></script>
+	<!-- <link href="js/jPlayer-master/dist/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" /> -->
+	
+	<!-- jQuery -->
+ 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script> -->
+
+	<title>MP3Palyer</title>
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div class="main">
+		
+		<div class="container">
+			<div id="MPlayer" ></div>
+			<div id="MPlayer__container">
+				
+				<!-- status -->
+				<div class="row mt-3">
+					<div class="col-2 col-lg-4 d-flex justify-content-end ">
+						<a href="#" class="back">
+							<img src="images/btn_back.svg" alt=""></a>
+					</div>	
+					<div id="status" class="col-8 col-lg-4 d-flex justify-content-center font-weight-bold  mainTitle ">Ready </div>
+					<div class="col-2 col-lg-4 d-flex justify-content-start " >
+						<a href="#" class="showmenu">
+							<img src="images/menu.svg" alt=""></a>
+					</div>
+					
+				</div>
+				<div class="aside hidden">
+				<div class="row  d-flex justify-content-center ">
+					<div class="col-12 d-flex justify-content-center ">	
+						<div class="d-flex justify-content-center align-items-center mr-3 albumImg">
+							<div class="albumImg__center"></div>
+							<div class="albumImg__other"></div>
+							<img class="border_radius albumImg__main" src="" alt="" >
+						</div>
+						<div class="d-flex flex-column  albumName">
+							<div class="jp-artist mt-3 font-weight-bold"></div>
+							<div class="jpPlaylistTotal mb-4">20 songs・102 min</div>
+							
+							<div class="d-flex justify-content-end ">
+								<!-- play/pause -->
+								<button class="jp-play mr-3 btn btn-light btn--bg play__btn"  tabindex="0">
+									<div class="aside__play"></div>
+								</button>
+								<!-- cycle -->
+								<button class="jp-repeat mr-3 btn btn-light btn--bg "  tabindex="0">
+									<img src="images/btn_cycle.svg" alt="" >
+								</button>
+								<!-- random -->
+								<button class="jp-shuffle btn btn-light btn--bg "  tabindex="0">
+									<img src="images/btn_random.svg" alt="" >
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- song List -->
+					<div class="col-12 d-flex justify-content-center mb-5">
+						<!-- 單曲時間 -->
+						<!-- <div class="jp-duration ml-2"  ></div> -->
+						<!-- 專輯列表 -->
+
+						<div class="jp-playlist playList ">
+							<p class="ml-4 pl-2 ">Play List</p>
+							<p class="jp-duration ml-4 pl-2"> </p>
+							<ul class="moveable ">
+								<li class="">&nbsp;</li>
+
+							</ul>
+						</div>
+					</div>
+					
+					<div class="MyFavorite hidden">
+						<div  class="col-12 d-flex justify-content-center ">	
+							<div class="d-flex justify-content-center align-items-center mr-3 albumImg">
+								<div class="albumImg__center"></div>
+								<div class="albumImg__other"></div>
+								<img class="border_radius" src="http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png" alt="" >
+							</div>
+							<div class="d-flex flex-column  albumName">
+								<div class="jp-artist mt-3 font-weight-bold"></div>
+								<div class="jpPlaylistTotal mb-4">20 songs・102 min</div>
+								
+								<div class="d-flex justify-content-end ">
+									<!-- play/pause -->
+									<button id="playlist-setPlaylist-audio-mix" class=" mr-3 addOtherList btn btn-light btn--bg"  tabindex="0">
+										<div class="addList"></div>
+									</button>
+									<!-- cycle -->
+									<button class="jp-repeat mr-3 btn btn-light btn--bg "  tabindex="0">
+										<img src="images/btn_cycle.svg" alt="" >
+									</button>
+									<!-- random -->
+									<button class="jp-shuffle btn btn-light btn--bg "  tabindex="0">
+										<img src="images/btn_random.svg" alt="" >
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 d-flex justify-content-center ">	
+							<div class="d-flex justify-content-center align-items-center mr-3 albumImg">
+								<div class="albumImg__center"></div>
+								<div class="albumImg__other"></div>
+								<img class="border_radius" src="http://www.jplayer.org/video/poster/Finding_Nemo_Teaser_640x352.png" alt="" >
+							</div>
+							<div class="d-flex flex-column  albumName">
+								<div class="jp-artist mt-3 font-weight-bold"></div>
+								<div class="jpPlaylistTotal mb-4">20 songs・102 min</div>
+								
+								<div class="d-flex justify-content-end ">
+									<!-- play/pause -->
+									<button id="playlist-setPlaylist-media-mix" class=" mr-3 addOtherList btn btn-light btn--bg"  tabindex="0">
+										<div class="addList"></div>
+									</button>
+									<!-- cycle -->
+									<button class="jp-repeat mr-3 btn btn-light btn--bg "  tabindex="0">
+										<img src="images/btn_cycle.svg" alt="" >
+									</button>
+									<!-- random -->
+									<button class="jp-shuffle btn btn-light btn--bg "  tabindex="0">
+										<img src="images/btn_random.svg" alt="" >
+									</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				</div>
+				
+
+				<div class="album">
+				<!-- Album -->
+				<div class="row album ">
+					<!-- AlbumImg -->
+					<div class="col-12 d-flex justify-content-center ">
+						<div class="d-flex justify-content-center align-items-center albumImg">
+							<div class="albumImg__center"></div>
+							<div class="albumImg__other"></div>
+							<img class="border_radius" src="" alt="" >
+						</div>
+
+						<div class="albumEdit ">
+							<div class="mt-3  ">
+								<div class="subTitle " >
+									<div class="jp-artist mt-3 font-weight-bold "></div>
+									<div class="jp-title mb-3"></div>
+									<h4 class="mt-3"><img class="mr-3" src="images/subtitles.svg" alt=""> Lyrics</h4>
+									<h4 class="mt-3"><img class="mr-3" 
+										src="images/add-circular-outlined-button.svg" 
+										alt="">Add to my playlist</h4>
+									<h4 class="mt-3"><img class="mr-4" src="images/share.svg" alt="">Share</h4>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+						
+				</div>
+				<div class="row songName invisible">
+					<!-- songName -->
+					<div class="col-12 d-flex justify-content-center mainTitle">
+						<div class="jp-title font-weight-bold "></div>
+					</div>
+					<!-- AlbumName and songName -->
+					<div class="col-12 d-flex justify-content-center subTitle ">
+						<div class="jp-artist mr-1"></div>
+						<span> - </span>
+						<div class="jp-title ml-1"></div>		
+					</div>
+					
+				</div>
+				<div class="row d-flex justify-content-center">
+					<!-- Time and playBar-->
+					<div class="col-12 d-flex justify-content-center align-items-center">
+						<div class="jp-current-time mr-2" role="timer" aria-label="time"></div>
+							<!-- palyBar -->
+							<div class="jp-progress playBar--style">
+								<div class="jp-seek-bar ">
+									<div class="jp-play-bar "></div>
+								</div>
+							</div>
+						<div class="jp-duration ml-2" role="timer" aria-label="duration"></div>
+					</div>
+
+					<!-- Controls -->
+					<div class="col-12 d-flex justify-content-center MPlayer__controls">
+						<!-- cycle -->
+						<button type="button" class="jp-repeat mr-5  btn btn-light btn--bg"  tabindex="0">
+							<img src="images/btn_cycle.svg" alt="" >
+						</button>
+						<!-- last-track -->
+						<button type="button" class="jp-previous mr-2  btn btn-light btn--bg"  tabindex="0">
+							<img src="images/btn_last-track.svg" alt="">
+						</button>
+						<!-- play/pause -->
+						<button type="button" class="jp-play mr-3 ml-3 btn btn-light  play__bg"  tabindex="0">
+							<div class="play"></div>
+						</button>
+						<!-- next-track	 -->
+						<button type="button" class="jp-next ml-3 btn btn-light btn--bg"  tabindex="0">
+							<img src="images/btn_next-track.svg" alt="">
+						</button>
+						<!-- random -->
+						<button type="button" class="jp-shuffle ml-5 btn btn-light btn--bg"  tabindex="0">
+							<img src="images/btn_random.svg" alt="" >
+						</button>
+						
+					</div>
+					
+					<!-- subscribe 求訂閱-->
+					<div class="row">
+						<div class="col">
+							<div class="subscribe pt-5 d-flex flex-column justify-content-center align-items-center invisible">
+								<button type="button" class="close " >
+									<i class="material-icons icons clear ">clear</i>
+								</button>
+								<div class="coles"></div>
+								<h2 class="mb-4">“ Without music,</br> life is a mistake. ”</h2>
+								<p class="mb-3">Let’s make it right !</p>
+								<button type="button" class="btn btn-primary subscribe__btn pt-1 mb-5"><p>Subscribe</p></button>
+							</div>
+						</div>
+					</div>
+					
+						
+					
+					<!-- volume -->
+					<!-- <div class="jp-volume-controls">
+						<button class="jp-mute" role="button" tabindex="0">mute</button>
+						<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+						<div class="jp-volume-bar">
+							<div class="jp-volume-bar-value"></div>
+						</div>
+					</div> -->		
+				</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script src="js/all.js"></script>
+</body>
+</html>
