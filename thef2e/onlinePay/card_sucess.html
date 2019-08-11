@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 符合各種裝置 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!--bootstrap 4-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		
+	
+
+	<!--goole icon -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+ 	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+ 	<!-- jQuery -->
+ 	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+
+	<title>Online Pay | Sucess</title>
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div class="container  main">
+
+		<div class="row mx-2 my-5 justify-content-center ">
+			<div class="col-lg-8 field--border">
+				
+				<div class="text-center sucess ml-n3">SUCCESS!</div>
+				<!-- 內框邊線樣式 -->
+				<div class="field--insideBorder ">
+					<div class="field--insideBorder--upperLeft"></div>
+					<div class="field--insideBorder--upperRight"></div>
+					<div class="field--insideBorder--lowerLeft"></div>
+					<div class="field--insideBorder--lowerRight"></div>	
+				</div>
+
+				<!-- sucess title -->
+				<div class="text-center payFieldSucess__title mb-5 py-3">
+					[ 購買成功! ]</br><div class="h6">感謝您的購買</div>
+				</div>
+
+				<div class="row  payFieldSucess__content no-gutters field--border ">
+					<div class="col-12 mt-n4">
+						<div class="row justify-content-center">
+							<div class="col-3  py-2 px-2 text-center payDetail field--border  ">付款明細</div>
+						</div>
+					</div>
+					
+					<!-- 內容需要隨著訂單變化 -->
+					<div class="col">
+						<div class="row justify-content-center no-gutters  order card__order">
+							<div class="col-sm-8 ">
+								<table class="table table-sm table-borderless">
+								  	<tbody >
+									    <tr >
+										    <td class="pt-3 pl-3" >訂單編號:</td>
+										    <td class="pt-3 ">201908020024</td>
+									    </tr>
+									    <tr>
+									    	<td class="pl-3">訂購人:</td>
+									    	<td >王小明</td>
+									    </tr>
+									    <tr>
+									    	<td class="pl-3 ">訂購人Email:</td>
+									    	<td >HSIAOMING@gmail.com</td>
+									    </tr>
+									    <tr>
+									    	<td class="pl-3 ">付款狀態:</td>
+									    	<td class="">已付款</td>
+									    </tr>
+									    <tr>
+									    	<td class="pb-3 pl-3">付款方式:</td>
+									    	<td class="pb-3 ">信用卡</td>
+									    </tr>
+								     </tbody>
+								</table>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row d-flex no-gutters justify-content-center field--border listField listField__cardSucess" >
+					<div class="col-sm-8 px-2 ">
+						
+							
+							<table class="table table-sm ">
+							  <thead>
+							    <tr class="table--borderTop">
+							      <th scope="col">#</th>
+							      <th scope="col">品項</th>
+							      <th scope="col" class="text-center">數量</th>
+							      <th scope="col" class="text-right">價格</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>流浪金屬史萊姆鎧甲</td>
+							      <td class="text-center">1</td>
+							      <td class="text-right">1000</td>
+							      
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>抗魔戒指</td>
+							      <td class="text-center">1</td>
+							      <td class="text-right">100</td>
+							      
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td>萬能藥</td>
+							      <td class="text-center">3</td>
+							      <td class="text-right">270</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">4</th>
+							      <td>賢者藥水</td>
+							      <td class="text-center">1</td>
+							      <td class="text-right">130</td>
+							    </tr>
+							  </tbody>
+							</table>
+							<div class="d-flex justify-content-between align-items-center listField__PriceTotal py-1 px-2">
+								<h5 class="currency">TWD</h5 >
+								<h3 class="text-right">1500</h3>
+							</div>
+							
+						
+					</div>
+				</div>
+				<div class="row justify-content-center no-gutters mb-5 payFieldSucess__content__btn">
+					<div class="col-10  field--border  ">
+						<button class="btn " id="print"><a href="#" class="content__btn1">列印此頁面</a></button>
+						<button class="btn "><a href="#" class="content__btn2">列印此頁面</button>
+						<button class="btn "><a href="index.html" class="content__btn3">回首頁</a></button>
+						<button class="btn "><a href="" class="content__btn4">回首頁</a></button>
+					</div>
+				</div>
+
+
+
+				<div class="row no-gutters mb-3 payFieldSucess__footer">	
+					<div class="col ">
+						<div class="thankyou">T</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">H</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">A</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">N</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">K</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">Y</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">O</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<div class="thankyou">U</div>
+						<!-- <div class="semicolon field--border--right pr-1">| | | | | | | | |</div> -->
+					</div>
+					<div class="col ">
+						<!-- <div class="semicolon pr-2">| | | | | | | | </div> -->
+					</div>
+				</div>
+			</div>
+
+
+			
+			
+		</div>
+		
+			
+		
+		
+		
+	</div>
+
+	<script src="js/all.js"></script>
+</body>
+</html>
