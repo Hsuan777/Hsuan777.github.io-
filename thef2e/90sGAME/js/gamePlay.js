@@ -45,7 +45,7 @@ const gamePlay = {
 
         // 左邊遊戲計時位置
         this.table__left = this.add.sprite(50, 750, 'table');
-        this.timeText = this.add.text(50, 720, `TIME: ${this.TimeStep}`, { fontSize: '28px', fill: '#FFFFFF' })
+        this.timeText = this.add.text(50, 720, `TIME: ${this.TimeStep}`, { fontSize: '28px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
         let gametime = setInterval(()=>{
             this.TimeStep--;
             //重新設定文字
@@ -66,22 +66,22 @@ const gamePlay = {
                 let btnRestart = this.add.sprite(760,500,'btnMenu');
                 btnRestart.setInteractive();
                 btnRestart.on('pointerdown', () => this.scene.restart());
-                this.startText = this.add.text(640,460, `再拜一次!`, { fontSize: '55px', fill: '#FFFFFF' })
+                this.startText = this.add.text(640,460, `再拜一次!`, { fontSize: '55px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
                 //回主選單
                 let btnMenu = this.add.sprite(760,700,'btnMenu');
                 btnMenu.setInteractive();
                 btnMenu.on('pointerdown', () => this.scene.start('gameStart'));
-                this.startText = this.add.text(660,650, `主選單`, { fontSize: '65px', fill: '#FFFFFF' })
+                this.startText = this.add.text(660,650, `主選單`, { fontSize: '65px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
 
                 this.player.x=450;
-                this.thankyouText = this.add.text(100,300, `嗚嗚嗚嗚謝謝你讓我吃飽! 我可以安心地回去了! (嗝~)`, { fontSize: '42px', fill: 'black',})
+                this.thankyouText = this.add.text(100,300, `嗚嗚嗚嗚謝謝你讓我吃飽! 我可以安心地回去了! (嗝~)`, { fontSize: '42px', fill: 'black',fontFamily: 'Noto Sans TC',})
                 
             }
         }, 1000);
 
         //右邊分數計算位置
         this.table__right = this.add.sprite(1250, 750, 'table');
-        this.scoreText = this.add.text(1080,720, "Score: 0", { fontSize: '28px', fill: '#FFFFFF' })
+        this.scoreText = this.add.text(1080,720, "Score: 0", { fontSize: '28px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
         // 碰撞時銷毀
 
         //夥伴出來搶食
@@ -257,7 +257,7 @@ const gamePlay = {
         },5000);
 
     },
-   
+
 
 
     update: function(){

@@ -28,7 +28,7 @@ const gameRule = {
         let btnMenu = this.add.sprite(1080,700,'btnMenu');
         btnMenu.setInteractive();
         btnMenu.on('pointerdown', () => this.scene.start('gameStart'))
-        this.startText = this.add.text(960,650, `主選單`, { fontSize: '70px', fill: '#FFFFFF' })
+        this.startText = this.add.text(960,650, `主選單`, { fontSize: '70px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
 
     },
     update: function(){
