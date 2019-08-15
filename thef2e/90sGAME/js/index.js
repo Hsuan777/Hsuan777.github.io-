@@ -4,7 +4,7 @@ const config = {
     height: 800,
     parent: 'ghostapp',
     backgroundColor: '#fff',
-    // font-family: "Noto Sans CJK TC",
+    fontFamily: "Noto Sans TC",
     physics: {
         default: 'arcade',
         arcade: {
