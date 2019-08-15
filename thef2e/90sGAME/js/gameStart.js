@@ -36,7 +36,7 @@ const gameStart = {
 
         //CSS可以寫在這裡
         var titleStyle = {
-            fontFamily: '"Noto Sans CJK TC"',
+            fontFamily: 'Noto Sans TC',
             fontSize: '70px',
             fill: '#FFFFFF',
         };
@@ -73,10 +73,10 @@ const gameStart = {
         graphics.fillRoundedRect(370, 150, 530, 100, 32);
         this.titleText = this.add.text(370,140, `好兄弟美食大賽`, titleStyle).setPadding(20);
 
-        this.startText = this.add.text(450,600, `大拜拜開始!`, { fontSize: '70px', fill: '#FFFFFF' });
+        this.startText = this.add.text(450,600, `大拜拜開始!`, { fontSize: '70px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', });
 
-        this.ruleText = this.add.text(380,420, `規則說明`, { fontSize: '35px', fill: 'black', })
-        this.scoreRankText = this.add.text(690,420, `排行榜`, { fontSize: '35px', fill: 'black', })
+        this.ruleText = this.add.text(380,420, `規則說明`, { fontSize: '35px', fill: 'black',fontFamily: 'Noto Sans TC', })
+        this.scoreRankText = this.add.text(690,420, `排行榜`, { fontSize: '35px', fill: 'black',fontFamily: 'Noto Sans TC', })
 
         //人物位置
         this.player = this.add.sprite(950, 480, 'ghost_left');
