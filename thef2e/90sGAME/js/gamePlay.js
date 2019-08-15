@@ -66,7 +66,7 @@ const gamePlay = {
                 let btnRestart = this.add.sprite(760,500,'btnMenu');
                 btnRestart.setInteractive();
                 btnRestart.on('pointerdown', () => this.scene.restart());
-                this.startText = this.add.text(640,460, `再拜一次!`, { fontSize: '55px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
+                this.startText = this.add.text(640,450, `再拜一次!`, { fontSize: '55px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', })
                 //回主選單
                 let btnMenu = this.add.sprite(760,700,'btnMenu');
                 btnMenu.setInteractive();
