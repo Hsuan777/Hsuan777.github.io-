@@ -70,8 +70,8 @@ const gameStart = {
         graphics = this.add.graphics();
         graphics.fillStyle(0xD13834, 1);
         //  32px radius on the corners 實際XY，圖形長寬，圓角px
-        graphics.fillRoundedRect(370, 150, 530, 100, 32);
-        this.titleText = this.add.text(370,140, `好兄弟美食大賽`, titleStyle).setPadding(20);
+        graphics.fillRoundedRect(370, 90, 530, 100, 32);
+        this.titleText = this.add.text(370,80, `好兄弟美食大賽`, titleStyle).setPadding(20);
 
         this.startText = this.add.text(450,590, `大拜拜開始!`, { fontSize: '70px', fill: '#FFFFFF',fontFamily: 'Noto Sans TC', });
 
